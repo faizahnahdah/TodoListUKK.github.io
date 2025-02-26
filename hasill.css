@@ -1,0 +1,227 @@
+body {
+    background:rgb(174, 204, 250);
+}
+
+#awal {
+    text-align: center; /* Untuk memusatkan teks secara horizontal */
+    padding: 20px 0; /* Opsional, untuk memberi ruang di atas dan bawah */
+    color: #000000;
+    text-shadow: 2px 2px 4px rgb(53, 53, 53); /* Menambahkan bayangan pada teks */
+}
+
+#addTodoBtn {
+    background:#C85AA0;
+    color: #141414; border-radius: 50%; padding: 15px;
+    font-size: 40px; cursor: pointer; box-shadow: 0 4px 6px rgb(0, 0, 0);
+    width: 60px; height: 60px; position: fixed;
+    bottom: 20px; right: 20px; display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+/* end tanda + */ 
+#addTodoForm {
+    display: flex; /* Menggunakan flexbox untuk memudahkan penyusunan */
+    justify-content: center; /* Menyusun modal di tengah secara horizontal */
+    align-items: center; /* Menyusun modal di tengah secara vertikal */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+#TodoForm {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    position: relative; /* Pastikan modal berada di atas overlay */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Tambahkan bayangan untuk memperjelas */
+    top: 100px;  /* Menyesuaikan posisi ke atas sedikit */
+    left: 400px; /* Menyesuaikan posisi ke kanan sedikit */
+}
+
+
+
+/* Membatasi lebar div task agar teks tidak melebar */
+.list div {
+    word-wrap: break-word; /* Memaksa teks panjang untuk turun ke baris berikutnya */
+    max-width: 200px; /* Membatasi lebar teks supaya tidak melebar */
+    white-space: normal; /* Memungkinkan teks untuk membungkus di baris baru */
+    max-width: 28ch; /* Membatasi lebar berdasarkan karakter */
+}
+
+/* Membuat elemen created-at, shift-right, st, dan menu-toggle tetap pada posisi */
+.list {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Jarak antara checkbox dan teks */
+    flex-wrap: nowrap; /* Jangan membungkus elemen ke baris baru */
+    width: 25%; /* Mengurangi lebar kotak agar tidak terlalu lebar */
+    box-sizing: border-box; /* Agar padding dan border tidak mempengaruhi ukuran lebar */
+    margin-right: 10px; /* Memberikan jarak kanan */
+}
+
+
+.todo-info {
+    display: flex; /* Membuat elemen-elemen dalam satu baris */
+    justify-content: flex-start; /* Menyelaraskan elemen-elemen di kiri */
+    align-items: center; /* Menyelaraskan elemen secara vertikal */
+    padding: 10px; /* Memberikan ruang di dalam kotak */
+    border-radius: 10px; /* Membuat sudut kotak lebih melengkung */
+    width: 50%; /* Menyesuaikan lebar kotak sesuai dengan kontainer induk */
+    box-sizing: border-box; /* Memastikan padding tidak mempengaruhi lebar total */
+    margin-left: 60px; /* Menggeser kotak lebih ke kiri */
+}
+
+.created-at, .shift-right, .st, .menu-toggle {
+    font-size: 22px;
+    white-space: nowrap; /* Agar teks tetap dalam satu baris */
+    margin: 0 19px; /* Memberikan jarak lebih besar antar elemen */
+}
+
+.st {
+    margin-left: 30px; /* Menambah jarak ke kiri untuk menggeser elemen ke kanan */
+}
+
+.taskk {
+    margin-left: 35px; /* Menambah jarak ke kiri untuk menggeser elemen ke kanan */
+}
+
+
+/* Menjaga jarak untuk tombol menu */
+.menu-toggle {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1); /* Menambahkan kotak transparan di belakang tombol */
+    padding: 5px;
+    border-radius: 5px; /* Memberikan sedikit kelengkungan pada tombol */
+}
+
+
+h2 {
+   text-align: center;
+}
+
+input, button {
+   width: 95%;
+   height: 35px;
+   padding: 8px;
+   margin-bottom: 10px;
+   border-radius: 4px;
+   
+}
+
+input[type="text"], input[type="date"] {
+   border: 1px solid #ccc;
+   top: 100px;  /* Menyesuaikan posisi ke atas sedikit */
+
+}
+
+.buttons {
+   display: flex; justify-content: space-between;
+}
+
+button {
+   background-color: #4CAF50; color: white;
+   border: none; cursor: pointer;
+}
+
+button[type="button"] {
+   background-color: #f44336; 
+}
+
+button:hover {
+   opacity: 0.8;
+} 
+
+.show-todo-section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.todo-item {
+    max-width: 800px; padding: 10px;
+    display: flex; gap: 40px; align-items: center;
+    border-radius: 15px; margin: 8px auto;
+    box-shadow: 0 6px 12px rgba(17, 17, 17, 0.788), 0 8px 24px rgba(0, 0, 0, 0.2);
+    background: #FF99CC; /* Warna pink susu yang sedikit lebih tua */
+    position: relative;
+    transition: transform 0.3s ease; 
+    left: -10px; /* Menyesuaikan posisi ke kanan sedikit */
+
+}
+
+
+.desatas{
+    max-width: 800px; padding: 10px;
+    display: flex; gap: 40px; align-items: center;
+    border-radius: 15px; margin: 8px auto;
+    box-shadow: 0 6px 12px rgba(17, 17, 17, 0.788), 0 8px 24px rgba(0, 0, 0, 0.2);
+    background: #C85AA0; /* Pink susu yang lebih tua dan lebih ungu */
+    position: relative;
+    transition: transform 0.3s ease; 
+    left: -10px; /* Menyesuaikan posisi ke kanan sedikit */
+    text-align: left;
+
+}
+
+td {
+    font-size: 20px;  /* Ukuran font 20px */
+    font-weight: bold;  /* Membuat font menjadi tebal */
+}
+
+
+/* Gaya khusus untuk masing-masing kolom */
+td.Tugas {
+    padding-right: 310px; /* Atur sesuai kebutuhan */
+    position: relative;  /* Memungkinkan penggunaan left */
+    left: 80px;  /* Menyesuaikan posisi ke kanan sedikit */
+    cursor: move;  /* Menambahkan kursor bergerak untuk indikasi drag */
+}
+
+
+td.Dibuat {
+    padding-right: 20px; /* Atur sesuai kebutuhan */
+
+}
+
+td.JW {
+    padding-left: 20px;  /* Menambahkan jarak ke kiri */
+    padding-right: 25px; /* Atur sesuai kebutuhan */
+    white-space: nowrap;  /* Mencegah teks terpotong */
+
+}
+
+td.status {
+    padding-right: 40px; /* Atur sesuai kebutuhan */
+}
+
+td.aksi {
+    padding-right: 30px; /* Atur sesuai kebutuhan */
+}
+
+
+
+.shift-left {
+    transform: translateX(-100%); 
+}
+
+.menu-toggle {
+    position: absolute;
+    right: 30px; top: 50%;
+    transform: translateY(-50%);
+    background: none; border: none; font-size: 24px;
+    cursor: pointer; z-index: 1;
+}
+
+.todo-item div {
+    font-size: 18px; 
+    font-weight: bold; 
+    color: #1a1919 ;
+}

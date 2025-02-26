@@ -1,0 +1,114 @@
+.kotakbelakang {
+    display: none;
+    position: absolute;
+    top: -40px;  /* Menyesuaikan posisi ke atas sedikit */
+    left: 820px; /* Menyesuaikan posisi ke kanan sedikit */
+    width: 20%;  /* Memperlebar kotak menjadi 80% dari lebar layar */
+    max-height: 85px;
+    padding: 5px;
+    overflow: auto;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.788), 0 8px 24px rgba(0, 0, 0, 0.2);
+    background:rgb(255, 153, 204);
+    border-radius: 10px;
+}
+.pilihanstatus {
+    font-size: 13px; /* Ukuran teks lebih besar */
+    padding: 10px; /* Memberikan jarak dalam */
+    border-radius: 8px; /* Membulatkan sudut */
+    background-color: #f9f9f9; /* Warna latar belakang dropdown */
+    color: #333; /* Warna teks */
+    width: 97px; /* Lebar dropdown */
+    cursor: pointer; /* Penunjuk mouse */
+    font-weight: bold;
+    margin-bottom: 15px; /* Jarak di bawah kotak */
+}
+
+
+.todo-actions form {
+    display: inline-block;
+    margin: 0 5px;
+}
+.edit, .delete {
+    border-radius: 5px; border: none; padding: 10px 20px; cursor: pointer; color: #fff;
+    display: inline-block; text-align: center; margin: 5px;
+    position: relative; /* Menambahkan positioning relatif */
+    left: 15px; /* Menambahkan pergeseran ke kanan */
+}
+.edit-btn {
+    background-color: #bdba05 !important; 
+    width: 70px; height: 45px; padding: 10px; border-radius: 5px;
+}
+
+.edit:hover {
+    background-color: #746110 !important;
+}
+
+.delete {
+    background-color: #d11d10 !important;
+    width: 70px; height: 45px; padding: 10px; border-radius: 5px;
+    margin-left: -2px; /* Menambahkan jarak tambahan untuk tombol delete */
+}
+
+.delete:hover {
+    background-color: #720c04 !important;
+}
+
+button i {
+    font-size: 20px; /* Ganti angka ini untuk mengatur ukuran ikon */
+}
+
+
+/* start edit list */
+/* Modal */
+.edit-modal {
+    display: flex; /* Menggunakan flexbox untuk memudahkan penyusunan */
+    justify-content: center; /* Menyusun modal di tengah secara horizontal */
+    align-items: center; /* Menyusun modal di tengah secara vertikal */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    position: relative; /* Pastikan modal berada di atas overlay */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Tambahkan bayangan untuk memperjelas */
+    top: 90px;  /* Menyesuaikan posisi ke atas sedikit */
+    left: 400px; /* Menyesuaikan posisi ke kanan sedikit */
+}
+
+
+.overlay {
+    display: flex; /* Menggunakan flexbox untuk overlay */
+    justify-content: center; /* Memastikan overlay berada di tengah */
+    align-items: center; /* Memastikan overlay berada di tengah */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+/* end edit list */
+
+.menu-toggle {
+    position: absolute;
+    right: 35px; top: 10%;
+    transform: translateY( -5% );
+    color: #0c0c0c;
+    background: none; border: none; font-size: 24px;
+    cursor: pointer; z-index: 1;
+    width: 45px; height: 50px; padding: 10px; border-radius: 5px;
+    left: 727px; /* Menyesuaikan posisi ke kanan sedikit */
+
+}
